@@ -1,7 +1,7 @@
 export const barChartDataDailyTraffic = [
     {
-      name: 'Daily Traffic',
-      data: [20, 30, 40, 20, 45, 50, 30],
+      name: 'projected income  €',
+      data: [3280, 2120, 3040, 2980, 2560, 3280, 4120],
     },
   ];
   
@@ -26,8 +26,8 @@ export const barChartDataDailyTraffic = [
       theme: 'dark',
     },
     xaxis: {
-      categories: ['00', '04', '08', '12', '14', '16', '18'],
-      show: false,
+      categories: ['01', '04', '08', '12', '14', '16', '18'],
+      show: true,
       labels: {
         show: true,
         style: {
@@ -103,8 +103,8 @@ export const barChartDataDailyTraffic = [
   };
   
   export const pieChartOptions = {
-    labels: ['Your files', 'System', 'Empty'],
-    colors: ['#4318FF', '#6AD2FF', '#EFF4FB'],
+    labels: ['Projected', 'Balance', 'Empty'],
+    colors: ['#4318FF', '#6AD2FF', '#48bb78'],
     chart: {
       width: '50px',
     },
@@ -133,7 +133,7 @@ export const barChartDataDailyTraffic = [
       },
     },
     fill: {
-      colors: ['#4318FF', '#6AD2FF', '#EFF4FB'],
+      colors: ['#4318FF', '#6AD2FF', '#48bb78'],
     },
     tooltip: {
       enabled: true,
@@ -146,23 +146,28 @@ export const barChartDataDailyTraffic = [
     },
   };
   
-  export const pieChartData = [63, 25, 12];
+  export const pieChartData = [63, 32.2, 4.8];
   
   export const barChartDataWeeklyRevenue = [
     {
-      name: 'PRODUCT A',
-      data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+      name: 'CARTS ABANDONDED',
+      data: [64, 53, 43, 39, 24, 15, 16, 18, 13],
+      color: '#ff0000',
+    },
+    {
+      name: 'FERO SAVINGS',
+      data: [40, 27, 33, 39, 42, 45, 56, 62, 74],
+      color: '#48bb78',
+    },
+    {
+      name: 'FIXED INCOME',
+      data: [300, 270, 230, 290, 220, 250, 160, 220, 280],
       color: '#6AD2Fa',
     },
     {
-      name: 'PRODUCT B',
-      data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+      name: 'PROJECTED INCOME',
+      data: [400, 370, 330, 390, 320, 350, 360, 320, 460],
       color: '#4318FF',
-    },
-    {
-      name: 'PRODUCT C',
-      data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-      color: '#EFF4FB',
     },
   ];
   
@@ -259,12 +264,17 @@ export const barChartDataDailyTraffic = [
   export const lineChartDataTotalSpent = [
     {
       name: 'Revenue',
-      data: [50, 64, 48, 66, 49, 68],
+      data: [59, 73, 43, 74, 49, 70],
       color: '#4318FF',
     },
     {
-      name: 'Profit',
-      data: [30, 40, 24, 46, 20, 46],
+      name: 'Fero Difference',
+      data: [40, 60, 30, 56, 30, 66],
+      color: '#48bb78',
+    },
+    {
+      name: 'Profit Pre Fero',
+      data: [30, 40, 24, 46, 20, 60],
       color: '#6AD2FF',
     },
   ];

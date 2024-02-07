@@ -1,7 +1,5 @@
 import Sidebar from "./components/sidebar/Sidebar";
-
-import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import TotalSpent from "./components/TotalSpent";
 import WeeklyRevenue from "./components/WeeklyRevenue";
 import DailyTraffic from "./components/DailyTraffic";
@@ -9,6 +7,8 @@ import PieChartCard from "./components/PieChartCard";
 import CreditCards from "./components/CreditCard";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+
+import "./App.css";
 
 function App() {
   return (
@@ -53,7 +53,7 @@ function App() {
         </div> */}
           </div>
 
-          <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div className="mt-5 grid grid-cols-1 gap-5 xl:grid-cols-2">
             <TotalSpent />
             <WeeklyRevenue />
           </div>

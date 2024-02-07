@@ -1,5 +1,5 @@
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
-import { BadgeEuro, CalendarDays, RefreshCcw } from "lucide-react";
+import { BadgeEuro, CalendarDays, ChevronDown, RefreshCcw } from "lucide-react";
 
 import {
   Card,
@@ -17,10 +17,14 @@ const Widget = (props: {
   title: string;
   subtitle: string;
   savings?: string;
+  cost?: string;
   stocks?: string[];
   spend?: string[];
+  down?: string;
 }) => {
-  const { icon, title, subtitle, savings, spend, stocks } = props;
+  
+  const { icon, title, subtitle, savings, spend, cost, stocks, down } = props;
+  
   const firstStock = stocks && stocks.length > 0 ? stocks[0] : "interest";
   const secondStock = stocks && stocks.length > 1 ? stocks[1] : "deposits";
   const thirdStock = stocks && stocks.length > 2 ? stocks[2] : "lones";
@@ -54,6 +58,22 @@ const Widget = (props: {
               <div className="flex flex-col items-center">
                 <span>FERO Savings</span>
                 <span>{savings}%</span>
+              </div>
+            </div>
+          )}
+          {cost && (
+            <div className="absolute flex w-full justify-end -translate-x-12 text-green-500 text-sm font-semibold">
+              <div className="flex flex-row items-center">
+                <ChevronDown />
+                <span>{cost}%</span>
+              </div>
+            </div>
+          )}
+          {down && (
+            <div className="absolute flex w-full justify-end -translate-x-12 text-red-500 text-sm font-semibold">
+              <div className="flex flex-row items-center">
+                <ChevronDown />
+                <span>1.2%</span>
               </div>
             </div>
           )}

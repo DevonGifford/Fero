@@ -1,8 +1,4 @@
-import {
-  MdArrowDropUp,
-  MdOutlineCalendarToday,
-  MdBarChart,
-} from "react-icons/md";
+import { MdArrowDropUp } from "react-icons/md";
 
 import {
   lineChartDataTotalSpent,
@@ -11,24 +7,29 @@ import {
 
 import LineChart from "./charts/LineChart";
 import { Card } from "@tremor/react";
+import { SharedDialog } from "./ui/sharedDialog";
+import { SharedNavigation } from "./ui/sharedNavigation";
 
 const TotalSpent = () => {
   return (
     <Card className="flex flex-col bg-white w-full rounded-3xl py-6 px-5 text-center">
+      {/* HEADER */}
       <div className="flex justify-between">
-        <button className="linear mt-1 flex items-center justify-center gap-2 rounded-lg bg-lightPrimary p-2 text-gray-600 transition duration-200 hover:cursor-pointer hover:bg-gray-100 active:bg-gray-200 dark:bg-navy-700 dark:hover:opacity-90 dark:active:opacity-80">
-          <MdOutlineCalendarToday />
-          <span className="text-sm font-medium text-gray-600">This month</span>
-        </button>
-        <button className="!linear z-[1] flex items-center justify-center rounded-lg bg-lightPrimary p-2 text-brand-500 !transition !duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-navy-700 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10">
-          <MdBarChart className="h-6 w-6" />
-        </button>
+        {/* TITLE */}
+        <div className="flex flex-row justify-start gap-2 items-center cursor-pointer">
+          <h2 className="flex justify-start text-base lg:text-base font-bold text-navy-700 dark:text-white">
+            Predictive Analytics
+          </h2>
+          <SharedNavigation />
+        </div>
+        {/* BUTTON */}
+        <SharedDialog />
       </div>
 
       <div className="flex h-full w-full flex-row justify-between sm:flex-wrap lg:flex-nowrap 2xl:overflow-hidden">
         <div className="flex flex-col">
           <p className="mt-[20px] text-3xl font-bold text-navy-700 dark:text-white">
-            $37.5K
+            €37.5K
           </p>
           <div className="flex flex-col items-start">
             <p className="mt-2 text-sm text-gray-600">Total Spent</p>
