@@ -6,6 +6,7 @@ import {
 import { Card } from "@tremor/react";
 import { SharedDialog } from "./ui/sharedDialog";
 import { SharedNavigation } from "./ui/sharedNavigation";
+import { SharedDrawer } from "./ui/sharedDrawer";
 
 const WeeklyRevenue = () => {
   return (
@@ -14,16 +15,13 @@ const WeeklyRevenue = () => {
       <div className="x-10 flex justify-between z-10">
         {/* TITLE */}
         <div className="flex flex-row justify-start gap-2 items-center cursor-pointer">
-          <h2 className="flex justify-start text-base lg:text-base font-bold text-navy-700 dark:text-white">
-          Predictive Financial Modeling
-          </h2>
+          <SharedDrawer heading="Predictive Financial Modeling" />
+
           <SharedNavigation />
         </div>
         {/* BUTTON */}
         <SharedDialog />
       </div>
-
-
 
       <div className="-translate-y-16">
         <div className="h-[200px] w-full xl:h-[350px]">

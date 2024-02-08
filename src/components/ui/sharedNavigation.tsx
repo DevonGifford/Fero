@@ -34,7 +34,7 @@ export function SharedNavigation() {
             <InfoIcon size={16} />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] xl:grid-cols-2 xl:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[300px] 3xl:grid-cols-2 3xl:w-[500px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}

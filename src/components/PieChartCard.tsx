@@ -1,19 +1,28 @@
 import PieChart from "./charts/PieChart";
 import { pieChartData, pieChartOptions } from "./../constants/charts";
 import { Card } from "@tremor/react";
+import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
+import { SharedInfo } from "./ui/sharedInfo";
 
 const PieChartCard = () => {
   return (
     <Card className="rounded-[20px] p-3">
       <div className="flex flex-row justify-between px-3 pt-2">
-        <div>
-          <h4 className="text-lg font-bold text-navy-700 dark:text-white pb-1">
-            Budget
-          </h4>
-          <h6 className="text-sm font-medium leading-4 text-gray-400 tracking-wider">
-            Monthly Allocation
-          </h6>
-        </div>
+        <Drawer>
+          <DrawerTrigger>
+            <div className="flex flex-col items-start">
+              <h4 className="text-lg font-bold text-navy-700 dark:text-white pb-1">
+                Budget
+              </h4>
+              <h6 className="text-sm font-medium leading-4 text-gray-400 tracking-wider">
+                Monthly Allocation
+              </h6>
+            </div>
+          </DrawerTrigger>
+          <DrawerContent>
+            <SharedInfo />
+          </DrawerContent>
+        </Drawer>
 
         <div className="mb-6 flex items-center justify-center">
           <select className="mb-3 mr-2 flex items-center justify-center text-sm font-bold text-gray-600 hover:cursor-pointer dark:!bg-navy-800 dark:text-white rounded-xl">
@@ -31,7 +40,9 @@ const PieChartCard = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-brand-500" />
-            <p className="ml-1 text-sm font-normal text-gray-600">Current Spend</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">
+              Current Spend
+            </p>
           </div>
           <p className="mt-px text-xl font-bold text-navy-700  dark:text-white">
             63%
@@ -43,7 +54,9 @@ const PieChartCard = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center justify-center">
             <div className="h-2 w-2 rounded-full bg-green-500" />
-            <p className="ml-1 text-sm font-normal text-gray-600">Fero Savings</p>
+            <p className="ml-1 text-sm font-normal text-gray-600">
+              Fero Savings
+            </p>
           </div>
           <p className="mt-px text-base font-bold text-navy-700 dark:text-white">
             4.8%
